@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+{% block body %}
+
+        <!-- Page Header-->
+        
+        <header class="masthead" style="background-image: url('/static/assets/img/home-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Admin Panel</h1>
+                            <span class="subheading">Manage your posts and change them</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <br>
+        <!-- Main Content-->
+        
+        <!-- {% block content %}
+            {% if msg %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                     {{msg}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% else %}
+                
+            {% endif %}
+        {% endblock content %}  -->
+       
+         <div class="container px-4 px-lg-5">
+           <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <h1>Basic Actions</h1>
+                        <a href="/takingattendance"> <button class="btn btn-primary"> Taking Attendance </button></a>
+                        <a href="/download"> <button class="btn btn-primary"> Download Attendance </button></a>
+                        <a href="/training"> <button class="btn btn-primary"> Train Model </button></a>
+                        <a href="/showingpost"> <button class="btn btn-primary"> Show Post </button></a>
+                        <a href="/reset"> <button class="btn btn-primary"> Reset </button></a>
+                        <a href="/logout"> <button class="btn btn-primary"> Logout </button></a>
+                        <hr>
+                    <h1>Upload An Image</h1>
+                        <form action="/uploader" method="post" enctype="multipart/form-data">
+                            <div class="form-floating">
+                                <input class="form-control" name="id_no" id="id_no" type="text" placeholder="Enter Student's Id Number..." data-sb-validations="required" />
+                                <label for="id_no">Id Number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Student's Id is required.</div>
+                            </div>
+                            <!-- <div class="form-floating">
+                                <input class="form-control" id="file1"  type="file" name="file1">
+                            </div>                             -->
+                            <div class="form-floating">
+                                <button type="submit" class="btn btn-primary">Submint</button>
+                            </div>
+                        </form>
+                        <hr>
+                        
+                    <!-- <h1>See Attendance</h1>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Sno</th>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody>
+                            {% for post in posts %}
+                            <tr>
+                                <td>{{post.sno}}</td>
+                                <td>{{post.title}}</td>
+                                <td>{{post.date}}</td>
+                                <td>
+                                    <a href="/edit/{{post.sno}}"><button class="btn btn-primary">Edit</button></a>
+                                </td>
+                                <td>
+                                    <a href="/delete/{{post.sno}}"><button class="btn btn-primary">Delete</button></a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table> -->
+                    
+                </div>
+            </div>
+            
+        </div> 
+
+        
+        {% endblock %}
+

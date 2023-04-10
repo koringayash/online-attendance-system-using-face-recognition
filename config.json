@@ -1,0 +1,14 @@
+{
+    "params":
+    {
+        "local_uri":"mysql://root:@localhost/attendance_system",      
+        "prod_uri":"mysql://root:@localhost/attendance_system",
+        "blog_name":"Face-Recognition",
+        "login_image":"bootstrap-logo-shadow.png",
+        "admin_user":"yash",
+        "admin_password":"Koringa",
+        "upload_location":"F:\\collage\\sem-6\\Project\\WebSite\\static\\assets\\studentsImg",
+        "local_server":"True",
+        "upload_contact":"F:\\collage\\sem-6\\Project\\WebSite\\static\\assets\\Contact_img"
+    }
+}

@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block body %}
+
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('/static/assets/img/attendance-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>{{params.blog_name}}</h1>
+                            <span class="subheading">Check Attendance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <form action="/attendance" method="post">
+                        <div class="form-group">
+                          <label for="Id_no">Enter ID Your Number</label>
+                          <input type="text" class="form-control" name="Id_no" id="Id_no" placeholder="ID Number">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>  
+                    
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Present</th>
+                            </tr>
+                            {% for attend in attends %}
+                                <tr>
+                                    <th>{{attend.date}}</th>
+                                    <th>{{attend.time}}</th>
+                                    <th>{{attend.present}}</th>
+                                </tr>
+                            {% endfor %}
+                        </thead>     
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+
+                    <!-- here using for loop you can show students attendance with date and time -->
+
+                </div>
+            </div>
+        </div>
+
+        {% endblock %}
+
